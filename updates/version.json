@@ -4,12 +4,12 @@
     "application": "macadamia-coletor",
     "channel": "development",
     "platform": "windows-x64",
-    "version": "0.2.0",
-    "url": "https://github.com/DaviMarino/macadamia-coletor/releases/download/v0.2.0/macadamia-0.2.0-windows-x64.zip",
-    "size": 57130311,
-    "sha256": "b652dad6cd2434fdf7b8845403c80f4bd7decec393ce59e56189b86da7868000",
-    "issued_utc": "2026-10-05T23:22:27.204991+00:00",
-    "expires_utc": "2026-10-12T23:22:27.204991+00:00"
+    "version": "0.2.1",
+    "url": "https://github.com/DaviMarino/macadamia-coletor/releases/download/v0.2.1/macadamia-0.2.1-windows-x64.zip",
+    "size": 57130314,
+    "sha256": "48a7ce4979c81790f53a7cff1541dcd991fb6339dee9245c542d7d0cc29f092b",
+    "issued_utc": "2026-10-05T23:40:34.256362+00:00",
+    "expires_utc": "2026-10-12T23:40:34.256362+00:00"
   },
-  "signature": "NQK97QLXm/Bs4Si+VGRkDZ8LhdBkufMLXyxUNCaopqhSSX1RVdk5XPYVeH4mp8ejYT2g2FUDsRyXU+UNMTZXDQ=="
+  "signature": "WaAVV9eF26kTuB6LhQhQb5pUxqbiFGfRPEsWsw8aMbMx9iCFALEQy7ILTfgdrqgbk9LFlY45vFTHtqYtTKFNAg=="
 }
