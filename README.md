@@ -1,31 +1,26 @@
 # Macadamia Coletor
 
-Coletor de telemetria para Le Mans Ultimate, com interface Windows e overlays 2D/VR. Este repositório público distribui documentação e versões compiladas; não contém o código-fonte do coletor ou do backend.
+Coletor de telemetria para Le Mans Ultimate, com interface Windows e overlays. Este repositório distribui documentação e versões compiladas. O acesso ao serviço está restrito a convidados aprovados na pré-alpha.
 
-## Pré-alpha de teste local
+## Instalação e migração para produção
 
-A versão 0.2.0 é destinada à validação pelo desenvolvedor. Login Steam ainda depende do backend Macadamia em localhost; não há backend público nem sincronização de telemetria. Não é uma versão pronta para uso comunitário sem essa infraestrutura.
+1. Feche o coletor e baixe **Macadamia-Setup-0.2.2.exe** nas [versões oficiais](https://github.com/DaviMarino/macadamia-coletor/releases/tag/v0.2.2).
+2. Execute o instalador sobre a instalação atual para atualizar o aplicativo, o helper e os atalhos.
+3. Abra Macadamia e entre com a mesma conta Steam utilizada em [macadamia.racing](https://macadamia.racing). Aceite os termos no site e aguarde aprovação se necessário.
+4. Mantenha o coletor aberto durante uma sessão do LMU. Novas capturas usam Parquet e sincronizam com o site. Corridas com menos de cinco minutos podem exigir Sincronizar agora.
 
-- [Versões e downloads](https://github.com/DaviMarino/macadamia-coletor/releases)
-- Windows x64 com WebView2 instalado.
-- Instalador por usuário, ícone e atalhos Macadamia.
-- Verificação de versão via manifesto assinado no GitHub.
-- Login Steam no navegador externo; nome/avatar e credenciais individuais.
-- Coleta automática após login e versão válida, a 30 Hz ou 50 Hz.
-- SQLite local ou exportação Parquet; sessões sem envio são preservadas.
-- Overlays originais de pedais/volante e comparação de setores.
-- VR depende do [OpenKneeboard](https://openkneeboard.com/).
+Windows x64 e Microsoft Edge WebView2 são necessários. O login acontece no navegador externo; o coletor nunca pede sua senha Steam. Credenciais locais são protegidas por DPAPI. Ao migrar do servidor local para produção, um novo login é esperado. Sessões locais antigas não são transferidas automaticamente.
 
-## Instalação de teste
+O instalador funciona por usuário. Dados e configurações ficam fora da instalação e são preservados na desinstalação. Para desinstalar, use Aplicativos instalados nas Configurações do Windows.
 
-Baixe Macadamia-Setup-0.2.0.exe em Releases. Feche o coletor antes de instalar. Instalação fica no perfil Windows; dados e credenciais ficam fora da instalação e são preservados na desinstalação.
+## Atualizações
 
-Mantenha o backend local ativo para login Steam. Depois use o atalho Macadamia. Para diagnóstico sem backend, execute macadamia.exe --local na pasta app da instalação. O modo --local é manual e não representa a experiência final.
+O ZIP é o pacote interno do atualizador. Para migrar instalações antigas à 0.2.2, use o novo Setup: o ZIP sozinho não troca helper/atalhos e um helper antigo pode continuar encaminhando o endereço do servidor local.
 
-## Atualizações e limites
+O manifesto updates/version.json é assinado com Ed25519 e vincula o pacote ao tamanho e SHA256. Falha de verificação bloqueia o modo conectado. O canal atual tem validade limitada e exige renovação do manifesto pelo responsável. A assinatura do manifesto não é assinatura Authenticode; os executáveis ainda não possuem assinatura digital Windows.
 
-updates/version.json identifica versão, pacote, tamanho e hash com assinatura Ed25519. Pacotes de atualização ficam em Releases. O updater valida os arquivos e substitui apenas o app, preservando dados. Falhas de verificação bloqueiam o modo conectado. Manifesto do canal de desenvolvimento tem validade limitada e precisa ser renovado pelo responsável.
+## Pré-alpha e suporte
 
-Ainda pendentes: validação do instalador/updater real, assinatura digital Windows, hospedagem pública do backend, sincronização/analytics e testes em máquina sem Python/Node. Fullscreen exclusivo não exibe overlays 2D; use janela ou borderless.
+Validação da distribuição atual, login nativo e captura/envio em produção ainda em andamento. Overlays 2D dependem de janela ou borderless; VR utiliza [OpenKneeboard](https://openkneeboard.com/). Convidados podem falar diretamente com o responsável.
 
-Não publique senhas, tokens, .env, dados de pilotos ou logs brutos em issues. Futuras condições de uso/privacidade serão definidas antes da disponibilização pública do serviço. Coach e monetização não fazem parte desta versão.
+[Termos](https://macadamia.racing/terms) e [Privacidade](https://macadamia.racing/privacy) estão disponíveis no site. Não publique senhas, tokens, arquivos .env, telemetria ou logs brutos em issues.
