@@ -4,10 +4,11 @@ Coletor de telemetria para Le Mans Ultimate, com interface Windows e overlays. E
 
 ## Instalação e migração para produção
 
-1. Feche o coletor e baixe **Macadamia-Setup-0.2.2.exe** nas [versões oficiais](https://github.com/DaviMarino/macadamia-coletor/releases/tag/v0.2.2).
+1. Feche o coletor e baixe **Macadamia-Setup-0.2.3.exe** nas [versões oficiais](https://github.com/DaviMarino/macadamia-coletor/releases/tag/v0.2.3).
 2. Execute o instalador sobre a instalação atual para atualizar o aplicativo, o helper e os atalhos.
 3. Abra Macadamia e entre com a mesma conta Steam utilizada em [macadamia.racing](https://macadamia.racing). Aceite os termos no site e aguarde aprovação se necessário.
-4. Mantenha o coletor aberto durante uma sessão do LMU. Novas capturas usam Parquet e sincronizam com o site. Corridas com menos de cinco minutos podem exigir Sincronizar agora.
+4. No Início, escolha se deseja enviar treino e classificação. Treino começa desativado; classificação ativada. Captura e overlays continuam ativos, e sessões dos tipos desativados permanecem locais. Corrida permanece habilitada.
+5. Mantenha o coletor aberto durante uma sessão do LMU. Novas capturas usam Parquet e sincronizam com o site. Corridas com menos de cinco minutos podem exigir Sincronizar agora.
 
 Windows x64 e Microsoft Edge WebView2 são necessários. O login acontece no navegador externo; o coletor nunca pede sua senha Steam. Credenciais locais são protegidas por DPAPI. Ao migrar do servidor local para produção, um novo login é esperado. Sessões locais antigas não são transferidas automaticamente.
 
