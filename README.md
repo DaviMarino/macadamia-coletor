@@ -4,11 +4,10 @@ Coletor de telemetria para Le Mans Ultimate, com interface Windows e overlays. E
 
 ## Instalação e migração para produção
 
-1. Feche o coletor e baixe **Macadamia-Setup-0.2.4.exe** nas [versões oficiais](https://github.com/DaviMarino/macadamia-coletor/releases/tag/v0.2.4).
+1. Feche o coletor e baixe **Macadamia-Setup-0.2.5.exe** nas [versões oficiais](https://github.com/DaviMarino/macadamia-coletor/releases/tag/v0.2.5).
 2. Execute o instalador sobre a instalação atual para atualizar o aplicativo, o helper e os atalhos.
 3. Abra Macadamia e entre com a mesma conta Steam utilizada em [macadamia.racing](https://macadamia.racing). Aceite os termos no site e aguarde aprovação se necessário.
-4. No Início, escolha se deseja enviar treino e classificação. Treino começa desativado; classificação ativada. Captura e overlays continuam ativos, e sessões dos tipos desativados permanecem locais. Corrida permanece habilitada.
-5. Mantenha o coletor aberto durante uma sessão do LMU. Novas capturas usam Parquet e sincronizam com o site. Corridas com menos de cinco minutos podem exigir Sincronizar agora.
+4. Mantenha o coletor aberto durante uma sessão do LMU. Novas capturas usam Parquet e sincronizam com o site. Corridas com menos de cinco minutos podem exigir Sincronizar agora.
 
 Windows x64 e Microsoft Edge WebView2 são necessários. O login acontece no navegador externo; o coletor nunca pede sua senha Steam. Credenciais locais são protegidas por DPAPI. Ao migrar do servidor local para produção, um novo login é esperado. Sessões locais antigas não são transferidas automaticamente.
 
@@ -16,7 +15,7 @@ O instalador funciona por usuário. Dados e configurações ficam fora da instal
 
 ## Atualizações
 
-O ZIP é o pacote interno do atualizador. Para migrar instalações antigas à 0.2.2, use o novo Setup: o ZIP sozinho não troca helper/atalhos e um helper antigo pode continuar encaminhando o endereço do servidor local.
+O ZIP é o pacote interno do atualizador. Quem já usa a 0.2.4 pode atualizar pelo aplicativo. Para uma instalação nova ou migração de versões antigas com helper local, use o Setup 0.2.5.
 
 O manifesto updates/version.json é assinado com Ed25519 e vincula o pacote ao tamanho e SHA256. Falha de verificação bloqueia o modo conectado. O canal atual tem validade limitada e exige renovação do manifesto pelo responsável. A assinatura do manifesto não é assinatura Authenticode; os executáveis ainda não possuem assinatura digital Windows.
 
