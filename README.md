@@ -10,7 +10,7 @@ Coletor de telemetria para Le Mans Ultimate, com interface Windows e overlays. E
 
 
 
-1. Feche o coletor e baixe **Macadamia-Setup-0.2.7.exe** nas [versões oficiais](https://github.com/DaviMarino/macadamia-coletor/releases/tag/v0.2.7).
+1. Feche o coletor e baixe **Macadamia-Setup-0.2.8.exe** nas [versões oficiais](https://github.com/DaviMarino/macadamia-coletor/releases/tag/v0.2.8).
 
 2. Execute o instalador sobre a instalação atual para atualizar o aplicativo, o helper e os atalhos.
 
@@ -32,11 +32,11 @@ O instalador funciona por usuário. Dados e configurações ficam fora da instal
 
 
 
-O ZIP é o pacote interno do atualizador. Quem já usa a 0.2.6 pode atualizar pelo aplicativo. Para uma instalação nova ou migração de versões antigas com helper local, use o Setup 0.2.7.
+O ZIP é o pacote interno do atualizador. Quem já usa a 0.2.7 pode atualizar pelo aplicativo. Para uma instalação nova ou migração de versões antigas com helper local, use o Setup 0.2.8.
 
 
 
-O manifesto updates/version.json é assinado com Ed25519 e vincula o pacote ao tamanho e SHA256. Falha de verificação bloqueia o modo conectado. O canal atual tem validade limitada e exige renovação do manifesto pelo responsável. A assinatura do manifesto não é assinatura Authenticode; os executáveis ainda não possuem assinatura digital Windows.
+O manifesto updates/version.json é assinado com Ed25519 e vincula o pacote ao tamanho e SHA256. Na versão 0.2.8, um manifesto expirado com assinatura e origem válidas permite continuar usando a versão instalada. Downloads de atualização exigem manifesto vigente; assinaturas inválidas continuam sendo rejeitadas. A assinatura do manifesto não é assinatura Authenticode; os executáveis ainda não possuem assinatura digital Windows.
 
 
 
@@ -54,3 +54,7 @@ Validação da distribuição atual, login nativo e captura/envio em produção 
 ## Novidades da 0.2.7
 
 Novas capturas preservam mais indicadores de suspensão, rodas, pneus, freios e comandos para análise no Le Mans Ultimate. Atualize e grave novas sessões para aproveitar os novos campos. A disponibilidade dos sinais depende do carro e do jogo. Veja as explicações PT/EN nas [notas da versão](https://github.com/DaviMarino/macadamia-coletor/releases/tag/v0.2.7).
+
+## Novidades da 0.2.8
+
+A expiração do manifesto de atualização não bloqueia mais a abertura e a captura na versão instalada. As atualizações continuam protegidas por assinatura e verificação de integridade. [Notas da versão](https://github.com/DaviMarino/macadamia-coletor/releases/tag/v0.2.8).
